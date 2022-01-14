@@ -6,7 +6,10 @@ import Contact from "./pages/contact";
 import notFoundPage from "./pages/Notfound";
 import newDetail from "./pages/newsDetail";
 import tuyendung from "./pages/tuyendung";
-
+import newList from "./pages/admin/news";
+import signIn from "./pages/admin/signIn";
+import signUp from "./pages/admin/signUp";
+import newsAdd from "./pages/admin/news/add";
 const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content) => {
@@ -31,6 +34,19 @@ router.on({
     "/news/:id": (value) => {
         print(newDetail.render(value.data.id));
     },
+    "/admin": () => {
+        print(newList.render());
+    },
+    "/admin/signIn": () => {
+        print(signIn.render());
+    },
+    "/admin/signUp": () => {
+        print(signUp.render());
+    },
+    "/admin/addnews": () => {
+        print(newsAdd.render());
+    },
+
 });
 router.notFound(() => print(notFoundPage.render()));
 router.resolve();
