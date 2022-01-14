@@ -38,7 +38,7 @@ router.on({
     "admin/news/:id": (value) => {
         print(editNews2.render(value.data.id));
     },
-    "/admin1": () => {
+    "/admin": () => {
         print(newList.render());
     },
     "/admin/signIn": () => {
