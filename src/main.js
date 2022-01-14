@@ -10,6 +10,7 @@ import newList from "./pages/admin/news";
 import signIn from "./pages/admin/signIn";
 import signUp from "./pages/admin/signUp";
 import newsAdd from "./pages/admin/news/add";
+import editNews2 from "./pages/admin/news/edit";
 const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content) => {
@@ -33,6 +34,9 @@ router.on({
     },
     "/news/:id": (value) => {
         print(newDetail.render(value.data.id));
+    },
+    "admin/news/:id": (value) => {
+        print(editNews2.render(value.data.id));
     },
     "/admin": () => {
         print(newList.render());

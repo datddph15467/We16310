@@ -1,5 +1,7 @@
-const addNews = {
-    render() {
+import data from "../../data";
+const editNews = {
+    render(id) {
+        const result = data.find((post) => post.id === id)
         return /*html*/ `
         <main>
             <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
@@ -27,7 +29,9 @@ const addNews = {
                                 Chi tiết
                               </label>
                               <div class="mt-1">
-                                <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Chi tiết tin tức"></textarea>
+                                <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Chi tiết tin tức">
+                                
+                                </textarea>
                               </div>
                             </div>
                             <div>
@@ -75,4 +79,4 @@ const addNews = {
         `
     }
 }
-export default addNews;
+export default editNews;

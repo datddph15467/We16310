@@ -1,5 +1,4 @@
 import dashbroadAdmin from './../dashbroad.js'
-import tablenewList from '../../../components/admin/table.js';
 import addNews from '../../../components/admin/addNew.js';
 const newsAdd = {
     render() {
